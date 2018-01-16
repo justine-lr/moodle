@@ -1,0 +1,80 @@
+/* Custom CSS
+-------------------------*/
+div.logo {
+    background: url([[setting:logo]]) 0 0 no-repeat;
+    display: block;
+    float: left;
+    height: 75px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+img.small-logo {
+    float: left;
+    height: 35px;
+    margin: 3px 10px 3px 0;
+}
+
+@media (max-width: 767px) {
+    img.small-logo {
+        margin: 3px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar img.small-logo {
+        max-width: 150px;
+    }
+    /* Applying accesshide styles */
+    .navbar .small-logo-container + .brand {
+        position: absolute;
+        left: -10000px;
+        font-size: 1em;
+        font-weight: normal;
+    }
+}
+
+
+
+/* my funky code
+p {
+  color: tomato !important;
+  font-size: 25px;
+  transition: all 2s;
+}
+
+p:hover {
+  background-color: yellow!important;
+  font-size: 250px !important;
+  color: yellowgreen!important;
+
+}
+
+
+body {
+  background-color: lightslategray !important;
+}
+
+footer {
+  color: plum !important;
+  border-top: : 20px steelblue;
+}
+
+h1 {
+  color: palevioletred !important;
+  text-shadow: 2px 2px powderblue !important;
+}
+
+h2 {
+  color: rosybrown !important;
+
+}
+
+div {
+    box-shadow: 2px sienna !important;
+}
+*/
+/* Custom CSS Settings
+-------------------------*/
+[[setting:customcss]]
