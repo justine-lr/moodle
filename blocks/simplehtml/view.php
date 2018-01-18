@@ -30,9 +30,9 @@ $PAGE->set_heading(get_string('edithtml', 'block_simplehtml'));
 
 $simplehtml = new simplehtml_form();
 
-$toform['blockid'] = $blockid;
-$toform['courseid'] = $courseid;
-$simplehtml->set_data($toform);
+ $toform['blockid'] = $blockid;
+ $toform['courseid'] = $courseid;
+ $simplehtml->set_data($toform);
 
 echo $OUTPUT->header();
 $simplehtml->display();
@@ -43,14 +43,13 @@ if($simplehtml->is_cancelled()) {
     // Cancelled forms redirect to the course main page.
     $courseurl = new moodle_url('/course/view.php', array('id' => $id));
     redirect($courseurl);
-} else if ($simplehtml->get_data()) {
-    // We need to add code to appropriately act on and store the submitted data
-    // but for now we will just redirect back to the course main page.
-    $courseurl = new moodle_url('/course/view.php', array('id' => $courseid));
-    redirect($courseurl);
+  } else if ($fromform = $simplehtml->get_data()) {
+      // We need to add code to appropriately act on and store the submitted data
+      // but for now we will just redirect back to the course main page.
+      $courseurl = new moodle_url('/course/view.php', array('id' => $courseid));
+      redirect($courseurl);
 } else {
-    // form didn't validate or this is the first display
-    $site = get_site();
+  $site = get_site();
 }
 
 
